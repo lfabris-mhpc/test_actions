@@ -4,11 +4,11 @@ cmake_minimum_required(VERSION 3.10)
 add_test(NAME Dry-run-test COMMAND echo "" > ../ljmd.x)
 
 #regression tests
-#file(COPY ../examples DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
-#file(COPY ../reference DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
-#file(COPY regression.sh DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY ../examples DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY ../reference DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY regression.sh DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
-#add_test(NAME Regression-test COMMAND regression.sh)
+add_test(NAME Regression-test COMMAND regression.sh)
 
 #unit tests
 #utilities
